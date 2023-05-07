@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+
+  <!-- reveal on scroll  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <!-- jquery  -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- end google fonts -->
+  <!-- <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"> -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/product/">
+  <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- font-awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>SUHKI</title>
+  <style>
+    .whatsapp {
+      width: 40px;
+      margin-left: 20px;
+    }
+    
+      .floating-wpp{position:fixed;bottom:15px;left:15px;font-size:14px;transition:bottom .2s}
+      .floating-wpp .floating-wpp-button{position:relative;border-radius:50%;transition:box-shadow .2s;cursor:pointer;overflow:hidden}
+      .floating-wpp .floating-wpp-button img,.floating-wpp .floating-wpp-button svg{position:absolute;width:70%;height:auto;object-fit:cover;top:50%;left:50%;transform:translate3d(-50%,-50%,0);border-radius:50%}.floating-wpp:hover{bottom:17px}.floating-wpp:hover .floating-wpp-button{box-shadow:1px 2px 8px rgba(60,60,60,.4)}.floating-wpp .floating-wpp-popup{border-radius:6px;background-color:#E5DDD5;position:absolute;overflow:hidden;padding:0;width:0;height:0;bottom:0;opacity:0;transition:bottom .1s ease-out,opacity .2s ease-out;transform-origin:bottom}.floating-wpp .floating-wpp-popup.active{padding:0 12px 12px;width:260px;height:auto;bottom:82px;opacity:1}.floating-wpp .floating-wpp-popup .floating-wpp-message{background-color:#fff;padding:8px;border-radius:0 5px 5px;box-shadow:1px 1px 1px rgba(0,0,0,.15);opacity:0;transition:opacity .2s}.floating-wpp .floating-wpp-popup.active .floating-wpp-message{opacity:1;transition-delay:.2s}.floating-wpp .floating-wpp-popup .floating-wpp-head{text-align:right;color:#fff;margin:0 -15px 10px;padding:6px 12px;display:flex;justify-content:space-between;cursor:pointer}.floating-wpp .floating-wpp-input-message{background-color:#fff;margin:10px -15px -15px;padding:0 15px;display:flex;align-items:center}.floating-wpp .floating-wpp-input-message textarea{border:1px solid #ccc;border-radius:4px;box-shadow:none;padding:8px;margin:10px 0;width:100%;max-width:100%;font-family:inherit;font-size:inherit;resize:none}.floating-wpp .floating-wpp-btn-send{margin-left:12px;font-size:0;cursor:pointer}
+
+      @media screen and (max-width: 750px) {
+  .gmail{
+    visibility: hidden;
+  }
+ 
+}
+  </style>
+  
+
+<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/js/floating-wpp.min.js"></script>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: black;">
+    <a class="navbar-brand" href="#" style="padding-left: 58px;"><img src="assets/img/images/logo2.png" width="90px" height="50px"  alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse" style="justify-content: center; text-align: center;">
+      <ul class="navbar-nav" style="margin: 0 auto;" >
+        <li class="nav-item active">
+          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a href="#pricing" class="nav-link active">About Us</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#contact" class="nav-link active">Contact Us</a>
+        </li>
+      </ul>
+
+      <a class="gmail" href="mailto:suhkiinfotech.com"><img src="assets/img/images/gmail.png" style="padding-left: 0px; padding-right: 10px;" width="50px" alt=""></a>
+      <div class="whatsapp" style="margin-left: 0; padding-right: 10px; ">
+        <a class="gmail" href=" https://wa.me/917507693344" target="_blank">
+          <img src="assets/img/1384055.png" alt="">
+        </a>
+      </div>
+     
+    </div>
+    
+  </nav>
+  <!-- diagonal hero -->
+  <section class="diagonal-section-bottom bg-contrast-lower bg-opacity-50%" style="background-image: url('assets/img/images/img5.jpg');" data-theme="dark">
+    <div class="container max-width-adaptive-sm padding-y-xxl">
+      <div class="text-center">
+        <div class="text-sm opacity-90% margin-bottom-xxs">Welcome</div>
+  
+        <div class="text-component margin-bottom-sm">
+          <h1 class="text-shadow-sm text-xxxl" style="color: white;"><em>SUHKI</em> Infotech</h1>
+          <p>Web Developement and App Developement</p>
+        </div>
+    
+        <div class="flex flex-wrap flex-center gap-sm">
+          <a class="btn btn--primary" href="#contact" style="background-color: #fec107;">Contact Us</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+   <!-- Features -->
+
+   <section id="features">
+    <div class="row feature-row">
+      <div class="feature col-lg-4"style="padding-bottom:5%" data-aos="slide-up">
+        <i class="check-icon fa-solid fa-circle-check fa-4x"></i>
+        <h3 style="padding-bottom: 5%;">Easy to use.</h3>
+        <p>Make your business online easily by working with us.</p>
+      </div>
+      <div class="feature col-lg-4"style="padding-bottom:5%" data-aos="fade-up">
+        <i class="check-icon fa-solid fa-bullseye fa-4x"></i>
+        <h3  style="padding-bottom: 5%;">Customized target</h3>
+        <p>Get customized websites/app as per your need.</p>
+      </div>
+      <div class="feature col-lg-4"style="padding-bottom:5%" data-aos="slide-up">
+        <i class="check-icon fa-solid fa-heart fa-4x"></i>
+        <h3  style="padding-bottom: 5%;">Budget Friendly</h3>
+        <p>Get Websites/app lesser than market rate</p>
+      </div>
+    </div>
+    </section>
+
+
+  <div class="p-table p-table--has-switch js-p-table--has-switch" style="padding: 3% 7%;">
+    <!-- <div class="flex justify-center margin-bottom-md">
+  
+      <ul class="radio-switch js-p-table__switch">
+        <li class="radio-switch__item">
+          <input class="radio-switch__input sr-only" type="radio" name="p-table-switch-name" id="p-table-switch-1" value="monthly" checked="">
+          <label class="radio-switch__label" for="p-table-switch-1">Monthly</label>
+        </li>
+  
+        <li class="radio-switch__item">
+          <input class="radio-switch__input sr-only" type="radio" name="p-table-switch-name" id="p-table-switch-2" value="yearly">
+          <label class="radio-switch__label" for="p-table-switch-2">Yearly</label>
+          <div aria-hidden="true" class="radio-switch__marker"></div>
+        </li>
+      </ul>
+    </div> -->
+
+    <!-- pricing section  -->
+  
+    <!-- <div class="grid gap-sm">
+      <div class="p-table__item col-4@md">
+        <div class="margin-bottom-xxs">
+          <h4 class="p-table__title">Free</h4>
+        </div>
+  
+        <div class="p-table__price-wrapper margin-bottom-sm">
+          <div class="p-table__price p-table__price--month"><span>$0</span> <i>/ month</i></div>
+          <div class="p-table__price p-table__price--year"><span>$0</span> <i>/ year</i></div>
+        </div>
+  
+        <ul class="p-table__features margin-bottom-md">
+          <li>1x user</li>
+          <li>Free 15/days trial</li>
+          <li>Access to all features</li>
+          <li>1 project</li>
+        </ul>
+  
+        <div class="margin-top-auto"><a href="#0" class="btn btn--subtle btn--md width-100%">Sign up</a></div>
+      </div>
+  
+      <div class="p-table__item p-table__item--popular col-4@md">
+        <div class="flex justify-between items-center margin-bottom-xxs">
+          <h4 class="p-table__title">Pro</h4>
+          <span class="p-table__badge">Popular</span>
+        </div>
+  
+        <div class="p-table__price-wrapper margin-bottom-sm">
+          <div class="p-table__price p-table__price--month" data-transition-delay="2nd"><span>$15</span> <i>/ month</i></div>
+          <div class="p-table__price p-table__price--year" data-transition-delay="2nd"><span>$99</span> <i>/ year</i></div>
+        </div>
+  
+        <ul class="p-table__features margin-bottom-md">
+          <li>1x user</li>
+          <li>Access to all features</li>
+          <li>10 projects</li>
+          <li>E-commerce integration</li>
+          <li>Email support</li>
+        </ul>
+  
+        <div class="margin-top-auto"><a href="#0" class="btn btn--primary btn--md width-100%">Sign up</a></div>
+      </div>
+  
+      <div class="p-table__item col-4@md">
+        <div class="margin-bottom-xxs">
+          <h4 class="p-table__title">Enterprise</h4>
+        </div>
+  
+        <div class="p-table__price-wrapper margin-bottom-sm">
+          <div class="p-table__price p-table__price--month" data-transition-delay="3rd"><span>$99</span> <i>/ month</i></div>
+          <div class="p-table__price p-table__price--year" data-transition-delay="3rd"><span>$699</span> <i>/ year</i></div>
+        </div>
+  
+        <ul class="p-table__features margin-bottom-md">
+          <li>10x users</li>
+          <li>Access to all features</li>
+          <li>Unlimited projects</li>
+          <li>E-commerce integration</li>
+          <li>24/7 support</li>
+          <li>Full security</li>
+        </ul>
+  
+        <div class="margin-top-auto"><a href="#0" class="btn btn--subtle btn--md width-100%">Sign up</a></div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- devices -->
+  <section class="position-relative z-index-1 padding-y-xl" data-theme="dark" data-aos="zoom-in">
+    <div class="container max-width-adaptive-lg position-relative z-index-2">
+      <div class="grid gap-lg items-center">
+        <div class="col-5@md">
+          <div class="text-component">
+            <p class="text-sm color-contrast-medium" data-aos="zoom-in">What we provide?</p>
+            <h1 style="color: white; font-size: 1.5rem;" data-aos="fade-down">Web Developement,App Developement</h1>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, rem neque doloribus impedit explicabo.</p> -->
+          </div>
+  
+          <div class="margin-top-sm">
+            <div class="flex flex-wrap gap-sm items-center">
+              <a class="btn btn--primary" href="#contact" style="background-color: #fec107;">Contact Us</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-7@md">
+          <div class="device-group-3">
+  
+            <div class="dev-phone dev-phone--top-light" aria-label="Image description" data-aos="fade-up">
+              <div class="dev-phone__body">
+                <div class="dev-phone__media">
+                  <div class="dev-phone__notch"></div>
+                  <svg viewBox="0 0 750 1334">
+                    <rect width="750" height="1334" fill="var(--color-contrast-lower)" />
+                    <path d="M130 850.633L436.4 544.233L620.24 850.633H130Z" fill="var(--color-contrast-medium)" />
+                    <path d="M192.328 606.56C226.172 606.56 253.608 579.124 253.608 545.28C253.608 511.436 226.172 484 192.328 484C158.484 484 131.048 511.436 131.048 545.28C131.048 579.124 158.484 606.56 192.328 606.56Z" fill="var(--color-contrast-medium)" />
+                  </svg>
+                </div>
+              </div>
+              <div class="dev-phone__shadow"></div>
+            </div>
+  
+            <div class="dev-desktop " aria-label="Image description" data-aos="fade-up">
+              <div class="dev-desktop__body">
+                <div class="dev-desktop__media">
+                  <svg viewBox="0 0 1920 1200">
+                    <rect width="1920" height="1200" fill="var(--color-contrast-lower)" />
+                    <path d="M639.76 839.094L1039.91 438.944L1280 839.094H639.76Z" fill="var(--color-contrast-medium)" />
+                    <path d="M721.158 520.342C765.357 520.342 801.188 484.511 801.188 440.312C801.188 396.113 765.357 360.282 721.158 360.282C676.959 360.282 641.128 396.113 641.128 440.312C641.128 484.511 676.959 520.342 721.158 520.342Z" fill="var(--color-contrast-medium)" />
+                  </svg>
+                </div>
+              </div>
+              <div class="dev-desktop__base">
+                <div class="dev-desktop__base-top"></div>
+                <div class="dev-desktop__base-bottom"></div>
+                <div class="dev-desktop__shadow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <figure class="bg-decoration z-index-1 flip-x flip-y" aria-hidden="true">
+      <svg class="bg-decoration__svg color-contrast-low" viewBox="0 0 1920 450" fill="none">
+        <rect opacity="0.5" x="1952.45" y="45.1172" width="175.38" height="1451.58"
+          transform="rotate(99.6416 1952.45 45.1172)" fill="url(#bg-decoration-v1-fx-6-linear-1)" />
+        <circle opacity="0.5" r="38" transform="matrix(-1 0 0 1 1583 171)" fill="url(#bg-decoration-v1-fx-6-radial-1)" />
+        <path opacity="0.5" d="M1338 187L1679.53 -0.113281L1416.47 -78.0066L1338 187Z" fill="url(#bg-decoration-v1-fx-6-linear-2)" />
+        <path opacity="0.5" d="M1683.59 291L1612.88 413.475L1709.47 387.593L1683.59 291Z" fill="url(#bg-decoration-v1-fx-6-linear-3)" />
+        <defs>
+          <linearGradient id="bg-decoration-v1-fx-6-linear-1" x1="2040.14" y1="45.1172" x2="2040.14" y2="1496.7"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="currentColor" stop-opacity="0" />
+            <stop offset="1" stop-color="currentColor" />
+          </linearGradient>
+          <radialGradient id="bg-decoration-v1-fx-6-radial-1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="scale(38)">
+            <stop stop-color="var(--color-primary)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary)" />
+          </radialGradient>
+          <linearGradient id="bg-decoration-v1-fx-6-linear-2" x1="1640.29" y1="132.39" x2="1377.23" y2="54.4967"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="currentColor" />
+            <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="bg-decoration-v1-fx-6-linear-3" x1="1599.94" y1="365.178" x2="1696.53" y2="339.296"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="currentColor" />
+            <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </figure>
+  </section>
+
+  
+
+  <!-- pricing section  -->
+  
+  <div class="grid gap-sm" id="pricing" style="padding-top: 7%; padding-bottom: 5%;">
+    <div class="p-table__item col-4@md papershadow" data-aos="slide-up" >
+      <div class="margin-bottom-xxs">
+        <h4 class="p-table__title">Portfolio Websites</h4>
+      </div>
+
+      <div class="p-table__price-wrapper margin-bottom-sm">
+        <div class="p-table__price p-table__price--month"></div>
+        <div class="p-table__price p-table__price--year">img5.jpg</div>
+      </div>
+
+      <ul class="p-table__features margin-bottom-md">
+        <li>Visiting website</li>
+        <li>Free professional Email</li>
+        <li>Access to all features</li>
+        <li>1 project</li>
+      </ul>
+
+      <div class="margin-top-auto"><a href="#contact" class="btn btn--subtle btn--md width-100%" style="background-color: #fec107;">Contact Us</a></div>
+    </div>
+
+    <div class="p-table__item p-table__item--popular col-4@md papershadow" data-aos="slide-up" >
+      <div class="flex justify-between items-center margin-bottom-xxs">
+        <h4 class="p-table__title">E-Commerse website</h4>
+        <span class="p-table__badge">Popular</span>
+      </div>
+
+      <div class="p-table__price-wrapper margin-bottom-sm">
+        <div class="p-table__price p-table__price--month" data-transition-delay="2nd" style="font-size: 1.5rem;"><span></span></div>
+        <div class="p-table__price p-table__price--year" data-transition-delay="2nd"></div>
+      </div>
+
+      <ul class="p-table__features margin-bottom-md">
+        <li>access Admin Panel</li>
+        <li>Access to all features</li>
+        <li>Payment gateway</li>
+        <li>E-commerce integration</li>
+        <li>Email support</li>
+      </ul>
+
+      <div class="margin-top-auto"><a href="#contact" class="btn btn--primary btn--md width-100%" style="background-color: #fec107;">Contact Us</a></div>
+    </div>
+
+    <div class="p-table__item col-4@md papershadow" data-aos="slide-up">
+      <div class="margin-bottom-xxs">
+        <h4 class="p-table__title">App Developement</h4>
+      </div>
+
+      <div class="p-table__price-wrapper margin-bottom-sm">
+        <div class="p-table__price p-table__price--month" data-transition-delay="3rd"></div>
+        <div class="p-table__price p-table__price--year" data-transition-delay="3rd"></div>
+      </div>
+
+      <ul class="p-table__features margin-bottom-md">
+        <li>Access to admin panel</li>
+        <li>Access to all features</li>
+        <li>Unlimited projects</li>
+        <li>E-commerce integration</li>
+        <li>24/7 support</li>
+        <li>Full security</li>
+      </ul>
+
+      <div class="margin-top-auto"><a href="#contact" class="btn btn--subtle btn--md width-100%" style="background-color: #fec107;">Contact Us</a></div>
+    </div>
+  </div>
+</div>
+
+  <!-- get in touch  -->
+  <section id="contact"  data-aos="fade-in" class="position-relative z-index-1 padding-y-xxl" data-theme="light" style="text-decoration-color: #fff;">
+    <div class="container max-width-sm position-relative z-index-2">
+      <div class="text-component text-center margin-bottom-xl">
+        <h1 style="color: rgb(0, 0, 0);">Get in touch</h1>
+        <p class="color-contrast-medium">Talk with an advisor to create customized inbound marketing program 
+          that blends <span><em>Proven strategy</em></span> with tactical instruction and <span><em>Guarantees results.</em></span>
+        </p>
+      </div>
+
+      <form action="mailto:tejasgadhe1920@gmail.com"> 
+        <fieldset class="margin-bottom-md">
+          <legend class="form-legend">Form</legend>
+      
+          <div class="grid gap-sm">
+            <div class="col-6@md">
+              <label class="form-label margin-bottom-xxs" for="input-name">Name</label>
+              <input class="form-control width-100%" type="text" name="input-name" id="input-name" required>
+            </div>
+        
+            <div class="col-6@md">
+              <label class="form-label margin-bottom-xxs" for="input-email">Email</label>
+              <input class="form-control width-100%" type="email" name="input-email" id="input-email" placeholder="email@myemail.com">
+            </div>
+      
+            <div>
+              <!-- <label class="form-label margin-bottom-xxs" for="input-invalid">Invalid</label>
+              <input class="form-control width-100%" type="text" name="input-invalid" id="input-invalid" aria-invalid="true" value="invalid data">
+              -->
+              <label for="phone">Enter your mobile number</label>
+              <input class="form-control width-100%" type="text" id="phone" name="phone">
+          </div>
+        </fieldset>
+      
+       
+          <div class="flex flex-wrap gap-md">
+            
+          <button class="btn btn--primary">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <figure class="bg-decoration z-index-1" aria-hidden="true">
+      <svg class="bg-decoration__svg color-contrast-low" viewBox="0 0 1920 450" fill="none">
+        <circle class="blend-overlay" opacity="0.5" cx="1745" cy="159" r="175" fill="url(#bg-decoration-v1-fx-4-radial-1)" />
+        <circle opacity="0.5" r="65" transform="matrix(-1 0 0 1 240 110)" fill="url(#bg-decoration-v1-fx-4-radial-2)" />
+        <g opacity="0.5" filter="url(#bg-decoration-v1-fx-4-filter-1)">
+          <circle r="26" transform="matrix(-1 0 0 1 298 386)" fill="var(--color-primary)" />
+        </g>
+        <circle class="blend-overlay" opacity="0.5" cx="1470" cy="-299" r="439" fill="url(#bg-decoration-v1-fx-4-radial-3)" />
+        <defs>
+          <filter id="bg-decoration-v1-fx-4-filter-1" x="267" y="355" width="62" height="62" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur" />
+          </filter>
+          <radialGradient id="bg-decoration-v1-fx-4-radial-1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(1745 159) rotate(90) scale(175)">
+            <stop stop-color="var(--color-primary)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary)" />
+          </radialGradient>
+          <radialGradient id="bg-decoration-v1-fx-4-radial-2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="scale(65)">
+            <stop stop-color="var(--color-accent)" stop-opacity="0"/>
+            <stop offset="1" stop-color="var(--color-accent)"/>
+          </radialGradient>
+          <radialGradient id="bg-decoration-v1-fx-4-radial-3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(1470 -299) rotate(90) scale(439)">
+            <stop stop-color="var(--color-accent)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-accent)" />
+          </radialGradient>
+        </defs>
+      </svg>
+    </figure>
+  </section>
+  
+  
+
+  
+  
+  <section class="margin-bottom-xl">
+    <div class="container max-width-sm">
+      <article class="article text-component">
+        <p>   </p>
+        <p></p>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- footer section  -->
+
+  <footer id="footer" style="background-color: black; padding-top: 0; padding-bottom: 20px;">
+    
+    <h4 style="justify-content: left; color: white;">+91-7507693344   </h4>
+    
+   <div class="sty" style="justify-content: space-around;"> <a href="https://instagram.com/suhki_infotech?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><i class="fa-brands fa-instagram social-icon" style="text-decoration: none; color: white;"></i></a>
+  
+    
+    <a href="mailto:suhkiinfotech@gmail.com" target="_blank"><i class="fa-sharp fa-solid fa-envelope social-icon" style="text-decoration: none; color: white;"></i></a>
+    <p style="color: white;" >© Copyright suhkiinfotech</p></div>
+  </footer>
+<script src="assets/js/scripts.js"></script>
+<div id="myButton" style="z-index: 100;"></div>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 120,
+    duration: 500
+  });
+</script>
+</body>
+  
+
+<script type="text/javascript">
+  $(function () {
+      $('#myButton').floatingWhatsApp({
+          phone: '917507693344',
+          popupMessage: 'Hello, how can we help you?',
+          message: "I'd like to start a business",
+          showPopup: true,
+          showOnIE: false,
+          headerTitle: 'Welcome!',
+          headerColor: 'green',
+          backgroundColor: 'transperant',
+          buttonImage: '<img src="assets/img/1384055.png" />'
+      });
+  });
+  
+</script>
+
+</html>
